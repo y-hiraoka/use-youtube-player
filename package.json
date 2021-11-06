@@ -1,0 +1,47 @@
+{
+  "name": "use-youtube-player",
+  "version": "0.0.0",
+  "description": "a React wrapper for YouTube IFrame API",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
+  "source": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && microbundle --no-compress --external react --globals react=React --strict -f es,cjs,umd",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx}'",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "react",
+    "youtube",
+    "iframe",
+    "google"
+  ],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "author": "y-hiraoka",
+  "license": "ISC",
+  "dependencies": {
+    "@types/youtube": "^0.0.46"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.6",
+    "microbundle": "^0.14.1",
+    "prettier": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.4.4"
+  },
+  "peerDependencies": {
+    "@types/react": ">=16.8.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "prettier --write"
+  }
+}
